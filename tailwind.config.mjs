@@ -2,7 +2,19 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		fontFamily: {
+			'cookie': 'Cookie',
+		},
+		extend: {
+			colors: {
+				'primary': '#4A6360',
+				'secondary': '#C6D7CF',
+				'tertiary': '#F6BF75',
+				'background': '#EFEDE7',
+				'card':'#FAF7F3'
+		},
+
+		}
 	},
 	plugins: [],
 }
