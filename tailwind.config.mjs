@@ -9,7 +9,7 @@ export default {
 			colors: {
 				'primary': '#4A6360',
 				'secondary': '#C6D7CF',
-				'tertiary': '#F6BF75',
+				'tertiary': '#BFA880',
 				'background': '#EFEDE7',
 				'card':'#FAF7F3'
 		},

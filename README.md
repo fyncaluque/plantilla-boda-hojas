@@ -1,6 +1,6 @@
-# Plantilla boda hojas
+# Plantilla para bodas - Modelo hojas
 
-## 🚀 Estructura del proyecto
+## 📁 Estructura del proyecto
 
 Dentro del proyecto veras las siguientes carpetas y archivos
 
@@ -18,7 +18,7 @@ Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada págin
 
 Cualquier activo estático, como imágenes, puede colocarse en el directorio `public/`.
 
-## 🧞 Comandos
+## 🚀 Comandos
 
 Todos los comandos se ejecutan desde la raíz del proyecto, desde un terminal:
 
