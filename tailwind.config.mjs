@@ -13,8 +13,10 @@ export default {
 				'background': '#EFEDE7',
 				'card':'#FAF7F3'
 		},
-
+		boxShadow: {
+			'custom': '0px 0px 15px -1px rgba(0, 0, 0, 0.40)',
 		}
+		},
 	},
 	plugins: [],
 }
