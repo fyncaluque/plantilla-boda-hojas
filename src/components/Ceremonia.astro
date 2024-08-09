@@ -1,0 +1,12 @@
+---
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+
+interface props{
+    styles:string
+}
+
+const styles=Astro.props
+---
+<div class={styles.className}>
+    <LottieAnimation src="/lotties/ceremonia.json" autoplay="visible"  />
+</div>  

@@ -1,0 +1,98 @@
+---
+interface props{
+    titulo:string,
+    dia:string,
+    hora:string
+    lugar:string
+    direccion:string
+}
+
+const {titulo,dia,hora,lugar,direccion}=Astro.props
+---
+<div>
+    <!-- Anillos -->
+    <div class="rounded-full bg-white size-[175px] p-8 shadow-custom mb-8 mx-auto">
+      <!-- Animacion -->
+      <slot/>
+    </div>
+
+    <!-- Cuerpo de la ceremonia -->
+    <div class="flex flex-col gap-10">
+      <h3 class="relative min-w-[40%] text-5xl font-cookie bg-color-2 text-white text-center mx-auto">
+        {titulo}
+      </h3>
+      <!-- Dia -->
+      <div class="flex flex-col items-center">
+        <h4 class="text-2xl font-bold text-color-2 text-center">Dia</h4>
+        <span class="text-xl text-color-2">{dia} - {hora}</span
+        >
+        <button
+          type="button"
+          class="group w-1/2 mt-4 bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+        >
+          <span
+            class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+            >Agendar</span
+          >
+        </button>
+      </div>
+      <!-- Lugar -->
+      <div class="flex flex-col items-center">
+        <h4 class="text-2xl font-bold text-color-2 text-center">Lugar</h4>
+        <span class="text-xl text-color-2">{lugar}</span>
+        <button
+          type="button"
+          class="group w-1/2 mt-4 bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+        >
+          <span
+            class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+            >Confirmar asistencia</span
+          >
+        </button>
+      </div>
+      <!-- Direccion -->
+      <div class="flex flex-col items-center">
+        <h4 class="text-2xl font-bold text-color-2 text-center">
+          Dirección
+        </h4>
+        <span class="text-xl text-color-2">{direccion}</span>
+        <button
+          type="button"
+          class="group w-1/2 mt-4 bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+        >
+          <span
+            class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+            >¿Como llegar?</span
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+      h3::before {
+    content: '';
+    background-image: url('/svg/cinta01.svg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 16px;
+    left: -15px;
+    top: 0;
+  }
+
+  h3::after {
+    content: '';
+    background-image: url('/svg/cinta02.svg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+    width: 16px;
+    right: -15px;
+    top: 0;
+  }
+  </style>

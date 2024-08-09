@@ -7,14 +7,17 @@ export default {
 		},
 		extend: {
 			colors: {
-				'primary': '#4A6360',
-				'secondary': '#C6D7CF',
-				'tertiary': '#BFA880',
-				'background': '#EFEDE7',
-				'card':'#FAF7F3'
+				'color-1': '#4A6360',
+				'color-2': '#81948B',
+				'color-3': '#C6D7CF',
+				'color-4': '#FAF7F3',
+				'color-5': '#EFEDE7',
+				'color-6': '#868686',
+				'color-7': '#BFA880',
 		},
 		boxShadow: {
 			'custom': '0px 0px 15px -1px rgba(0, 0, 0, 0.40)',
+			'custom2': '0px 0px 5px -1px rgba(0,0,0,0.40)',
 		}
 		},
 	},
