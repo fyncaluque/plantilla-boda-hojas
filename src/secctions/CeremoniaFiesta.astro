@@ -2,6 +2,7 @@
 import Ceremonia from '../components/Ceremonia.astro';
 import EventoInfo from '../components/EventoInfo.astro';
 import Fiesta from '../components/lotties/Fiesta.astro';
+import HojasCuatro from '../components/lotties/HojasCuatro.astro';
 ---
 
 <section id="ceremonia-fiesta" class="relative pb-[20%]">
@@ -19,10 +20,10 @@ import Fiesta from '../components/lotties/Fiesta.astro';
           <Ceremonia />
         </EventoInfo>
       </div>
-      <!-- Fiesta -->
+      <!-- Celebracion -->
       <div>
         <EventoInfo
-          titulo="Fiesta"
+          titulo="Celebración"
           dia="24.08.2024"
           hora="20:00"
           lugar="Restaurante el Encino"
@@ -33,6 +34,8 @@ import Fiesta from '../components/lotties/Fiesta.astro';
       </div>
     </div>
   </div>
+  <!-- Animaciones -->
+   <HojasCuatro className="absolute bottom-[38%] right-0 w-[30%] md:w-[13%] md:bottom-[20%]" loop={false}/>
 </section>
 
 <style>

@@ -51,6 +51,8 @@ const TIMESTAMP_END = 1723235400000;
 
     function updateCountdown() {
       const now = Date.now();
+
+      if(now > date) return;
       const diff = date - now;
 
       $days.innerHTML = formatTime(diff / DAY);
