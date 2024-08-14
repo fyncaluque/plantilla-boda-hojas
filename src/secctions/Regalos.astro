@@ -1,0 +1,37 @@
+---
+import HojasCuatro from '../components/lotties/HojasCuatro.astro';
+import Regalo from '../components/lotties/Regalo.astro';
+---
+
+<section
+  id="regalos"
+  class="relative pt-[90px] pb-[20%] md:pt-[14%] md:pb-[10%]"
+>
+  <div class="container flex flex-col items-center mx-auto">
+    <h2
+      class="text-[55px] leading-[40px] font-cookie text-color-1 text-center md:text-[60px] md:leading-[60px] py-0 px-4"
+    >
+      Regalos
+    </h2>
+    <p
+      class="text-[19px] text-center text-color-2 py-0 px-8 md:px-4 mt-6 mb-4 md:text-[20px] md:mt-0"
+    >
+      Si deseas regalarnos algo más que tu hermosa presencia...
+    </p>
+    <!-- Animacion -->
+    <Regalo className="w-[70px] mx-auto mb-10" />
+
+    <!-- Boton -->
+    <button
+      type="button"
+      class="group bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+    >
+      <span
+        class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+        >Ver más</span
+      >
+    </button>
+    <!-- Animacion hojas -->
+     <HojasCuatro className="absolute right-0 bottom-[16%] w-[26%] md:bottom-[20%] md:w-[15%]" loop={false}/>
+  </div>
+</section>
