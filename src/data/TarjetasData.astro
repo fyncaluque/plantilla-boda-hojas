@@ -1,0 +1,27 @@
+---
+import Musica from "../components/lotties/Musica.astro";
+import Vestuario from "../components/lotties/Vestuario.astro";
+import Tips from "../components/lotties/Tips.astro";
+
+export const tarjetasData = [
+  {
+    title: 'Música',
+    animation: Musica,
+    text: '¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?',
+    textButton: 'Sugerir canción',
+  },
+  {
+    title: 'Dess Code',
+    animation: Vestuario,
+    text: 'Una orientación para tu vestuario',
+    textButton: 'Ver más',
+  },
+  {
+    title: 'Tips y notas',
+    animation: Tips,
+    text: 'Información adicional para tener en cuenta',
+    textButton: '+ Info',
+  },
+
+];
+---

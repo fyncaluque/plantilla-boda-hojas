@@ -1,0 +1,36 @@
+---
+interface props {
+  title: string;
+  text: string;
+  textButton: string;
+}
+
+const { title, text, textButton } = Astro.props;
+---
+
+<div
+  class="flex flex-col justify-between py-[40px] px-[25px] min-h-[400px] bg-color-4 rounded-[20px] z-20"
+>
+  <!-- Titulo -->
+  <h3 class="text-[28px] text-color-7 text-center leading-5 font-bold mb-2">
+    {title}
+  </h3>
+  <!-- Animacion -->
+  <div class="h-20">
+    <slot />
+  </div>
+  <!-- Texto -->
+  <p class="text-[16px] text-color-2 text-center font-normal my-0 md:mb-4">
+    {text}
+  </p>
+  <!-- Boton -->
+  <button
+    type="button"
+    class="group bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+  >
+    <span
+      class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+      >{textButton}</span
+    >
+  </button>
+</div>

@@ -2,9 +2,6 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		fontFamily: {
-			'cookie': 'Cookie',
-		},
 		extend: {
 			colors: {
 				'color-1': '#4A6360',
@@ -15,11 +12,28 @@ export default {
 				'color-6': '#868686',
 				'color-7': '#BFA880',
 		},
+		fontFamily: {
+			'cookie': 'Cookie',
+		},
 		boxShadow: {
 			'custom': '0px 0px 15px -1px rgba(0, 0, 0, 0.40)',
 			'custom2': '0px 0px 5px -1px rgba(0,0,0,0.40)',
+		},
+		fontSize:{
+			'title': '55px',
 		}
 		},
 	},
-	plugins: [],
+	plugins: [
+		function ({ addComponents, theme }) {
+			addComponents({
+				'.title': {
+				  fontSize: theme('fontSize.title'),
+				  color: theme('colors.color-1'),
+				  fontFamily: theme('fontFamily.cookie'),
+				  textAlign: 'center',
+				}
+			  })
+		  },
+	],
 }

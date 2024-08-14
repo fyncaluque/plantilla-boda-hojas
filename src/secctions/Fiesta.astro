@@ -1,0 +1,67 @@
+---
+import { tarjetasData } from '../data/TarjetasData.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+---
+
+<section
+  id="fiesta"
+  class="relative py-[35%] md:pt-[14%] md:pb-[17%] bg-color-5"
+>
+  <div class="container mx-auto">
+    <h2
+      class="text-[55px] leading-[40px] font-cookie text-color-1 text-center md:text-[60px] md:leading-[60px] py-0 px-4"
+    >
+      Fiesta
+    </h2>
+    <p
+      class="text-[19px] text-center text-color-2 py-0 px-8 md:px-4 mt-6 mb-4 md:text-[20px] "
+    >
+      Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.
+    </p>
+    <!-- Tarjetas -->
+    <div
+      class="grid gap-y-12 mt-16 px-10 mx-auto sm:px-0 sm:w-[80%] md:w-full md:grid-cols-3 md:gap-x-12 xl:gap-x-14 xl:w-[70%] relative"
+    >
+    <img src="/svg/hojasFiesta.svg" alt="Imagen de hojas" class="absolute w-[132px] md:w-[160px] -top-[72px] md:-top-[180px] -left-[40px] md:-left-[120px] z-10 ">
+      {
+        tarjetasData.map((tarjeta) => (
+          <Tarjeta
+            title={tarjeta.title}
+            text={tarjeta.text}
+            textButton={tarjeta.textButton}
+          >
+            <tarjeta.animation className="w-[70px] mx-auto mt-[15px] mb-[40px]" />
+          </Tarjeta>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  #fiesta {
+    background-image: url('/svg/lineas02.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position-y: 50px;
+    position: relative;
+  }
+
+  #fiesta::after {
+    content: '';
+    position: absolute;
+    background-image: url('/svg/ondas04.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 100%;
+    height: 100%;
+    bottom: -85px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    #fiesta:after {
+      bottom: -35px;
+    }
+  }
+</style>
