@@ -1,0 +1,75 @@
+---
+import Instagram from "../components/lotties/Instagram.astro";
+---
+
+<section id="instagram" class="relative pt-[35%] pb-[50%] md:py-[16%]">
+  <div class="container mx-auto flex flex-col items-center">
+    <!-- Titulo -->
+    <h2
+      class="text-[55px] leading-[40px] font-cookie text-white text-center md:text-[60px] md:leading-[60px] py-0 px-4"
+    >
+      Compartimos este día junto a ti
+    </h2>
+    <!-- Frase -->
+    <p
+      class="text-[19px] text-center text-white mt-6 py-0 md:mt-0 md:px-4 mb-4 md:text-[20px]"
+    >
+      Comparte tus fotos y videos de este hermoso día
+    </p>
+    <!-- Animacion -->
+     <Instagram className="w-[60px] mx-auto py-4"/>
+     <!-- Enlace -->
+        <a href="" target="_blank" class="text-white text-[35px] md:text-[45px] xl:text-[55px] mb-10">#luisyrosa</a>
+
+     <!-- Boton -->
+     <button
+     type="button"
+     class="group bg-white shadow-custom2 rounded-full py-2 px-7 z-10 hover:bg-color-2 transition-colors duration-500"
+   >
+     <span
+       class="text-sm font-bold text-color-2 uppercase group-hover:text-white transition-colors duration-500"
+       >Ver en Instagram</span
+     >
+   </button>
+  </div>
+</section>
+
+<style>
+  #instagram {
+    background-image: url('/images/instagram_mobile.webp');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #instagram::before {
+    content: '';
+    position: absolute;
+    background-image: url('/svg/ondas05.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    top: -1px;
+  }
+
+  #instagram::after {
+    content: '';
+    position: absolute;
+    background-image: url('/svg/ondas06.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 100%;
+    height: 100%;
+    bottom: -2px;
+  }
+
+  @media only screen and (max-width: 768px) {
+      #instagram::before{
+        top: -2px;
+      }
+
+      #instagram::after{
+        bottom: 0;
+      }
+  }
+</style>
