@@ -6,7 +6,7 @@ interface props{
     loop:boolean
 }
 
-const {className,loop=true}=Astro.props
+const {className,loop=false}=Astro.props
 ---
 <div class={className}>
     <LottieAnimation src="/lotties/camara.json" autoplay="visible" loop={loop} />

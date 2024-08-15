@@ -1,6 +1,13 @@
 ---
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+
+interface props{
+    className:string
+    loop:boolean
+}
+
+const {className,loop=false}=Astro.props
 ---
-<div class="absolute bottom-[-60%] left-0 w-[22%] z-20 md:w-[14%] md:bottom-[-38%]">
-    <LottieAnimation src="/lotties/hojas03.json" autoplay="visible" loop={false} />
-</div>  
+<div class={className}>
+    <LottieAnimation src="/lotties/hojas03.json" autoplay="visible" loop={loop} />
+</div>

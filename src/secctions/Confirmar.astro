@@ -1,11 +1,76 @@
+---
+import HojasDos from '../components/lotties/HojasDos.astro';
+import HojasTres from '../components/lotties/HojasTres.astro';
+import Modal from '../components/Modal.astro';
+---
+
 <section id="confirmar" class="relative pt-[30%] pb-[20%] md:py-[10%]">
-  <div class="container">
+  <div class="container mx-auto flex flex-col items-center">
     <!-- Nombres de los novios -->
-    <h3 class="text-[65px] md:text-[85px] text-center text-color-2 font-cookie leading-5 font-medium">
+    <h3
+      class="text-[65px] md:text-[85px] text-color-2 font-cookie leading-5 font-medium mb-8"
+    >
       Luis
-      <span class="inline-block text-[30px] leading-[40px] md:leading-[42px] bg-color-3 w-10 h-10 rounded-full">&</span>
+      <span
+        class="inline-block text-[30px] leading-[40px] md:leading-[42px] bg-color-3 w-10 h-10 rounded-full text-center"
+        >&</span
+      >
       Rosa
     </h3>
     <!-- Boton -->
+    <button
+      type="button"
+      class="group bg-white shadow-custom2 rounded-full py-3 px-16 z-10 hover:bg-color-2 transition-colors duration-500 btn-gradient mb-6"
+    >
+      <span
+        class="text-md font-bold text-white uppercase group-hover:text-white transition-colors duration-500"
+        >Confirmar asistencia</span
+      >
+    </button>
+    <!-- Fecha -->
+    <div class="text-center">
+      <h4 class="text-color-2 font-bold text-xl">Confirmar hasta el dia</h4>
+      <p class="text-color-2 text-lg">24.08.2024</p>
+    </div>
+
   </div>
+  <!-- Animaciones -->
+  <HojasTres className="absolute top-0 left-0 w-[22%] z-20 md:w-[14%] " />
+  <HojasDos className="absolute bottom-[10%] right-0 w-[35%] md:w-[20%] z-20" />
 </section>
+
+<style>
+  #confirmar {
+    background-image: url('/svg/lineas02.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .btn-gradient {
+    animation: animateBg 3s linear infinite;
+    background-image: linear-gradient(
+      90deg,
+      #4a6360,
+      #81948b,
+      #d8d5b3,
+      #4a6360,
+      #81948b
+    );
+    background-size: 400% 100%;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .btn-gradient {
+    cursor: pointer;
+  }
+
+  @keyframes animateBg {
+    0% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+</style>
